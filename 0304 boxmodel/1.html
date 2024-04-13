@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inline block inlineblock</title>
+  <style>
+    div, p, h1, strong, em, span {border: 1px solid black;
+    background-color: #ccc;
+    margin: 5px;
+    padding: 20px;
+    width: 25%;
+    }
+
+    .ib{
+    background-color: #f00;
+    display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <!-- elementos block não ficam lado a lado -->
+  <div>Isso é uma div</div>
+  <div>Isso é outra div</div>
+  <div>Divs são renderizadas como box</div>
+  <p>Paragrafo tambem é uma caixa</p>
+  <h1>Titulos são box</h1>
+
+  <!-- incline : não aceitam largura e margem top e bottom-->
+  <br><br>
+  <strong>Strong é um elemento incline</strong>
+  <strong>Strong</strong>
+  <em>Emphasis</em>
+  <span>Span é uma caixa generica de textos</span>
+
+  <!-- renderizar inline block -->
+  <div class="ib">Isso é uma div</div>
+  <strong class="ib">Strong</strong>
+  <em class="ib">Emphasis</em>
+
+</body>
+</html>

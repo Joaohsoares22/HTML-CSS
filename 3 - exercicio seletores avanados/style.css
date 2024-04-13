@@ -1,0 +1,180 @@
+:root{
+    scroll-behavior: smooth;
+    --bg-hover: #939090;
+    --bg-border: #574c4c;
+    --bg-h1: #000000;
+    --bg-white: #ffffff;
+    --bg-gray: #9e9292;
+    --bg-darkgray: #797373;
+    --bg-black: #000000;
+    --bg-section1: #b8bdb5;
+    --bg-section2: #889696;
+    --bg-section3: #5f7470;
+    --background: #d3d3d3;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--background);
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin:auto;
+    background-color: var(--bg-white);
+    min-height: 100vh;
+    line-height: 2em;
+}
+header, section, nav{
+    border-bottom: 1px solid var(--bg-border);
+    padding: 10px 50px;
+}
+
+section{
+    min-height: 50vh;
+}
+
+header{
+    text-align: center;
+}
+
+table{
+    width: 100%;
+}
+/*
+* 
+Para esta atividade, você não deve alterar absolutamente nada o arquivo HTML.
+
+1 - formate os links como achar mais apropriado em seus estados (link, visited, hover, active) v
+2 - os links devem estar lado a lado (display:inline ou inline-block) v
+3 - a pizza do cheff está em falta, esconda esta linha da tabela (display:none) v
+4 - faça a tabela ser listrada com cores diferentes 
+5 - a primeira linha da tabela (cabeçalho) deve ser com uma cor destaque
+6 - cada seção deve ter uma cor de fundod diferente
+7 - Títulos devem possui cores diferentes em cada seção. No entanto, os parágrafos das seções devem ser de cores iguais.
+8 - adicione "R$" nos preços das pizzas
+9 - links externos devem possuir uma cor ligeiramente diferente (começa com http)
+10 - adicione "Rua" antes do nome da rua "Maria Aparecida Barbosa"
+11 - adicione "bairro antes de "Campo Duna"
+12 - adicione "Santa Catarina" após o nome da cidade (Garopaba)
+13 - ao passar o cursor sobre cada linha da tabela, ela deve ser "iluminada" com outra cor (menos o cabeçalho). 
+	 Dica: combinação de pseudo classes
+14 - o texto do endereço deve ser centralizado
+15 - Desenvolva 3 exemplos de uso de pseudo-classes que não foram demonstradas pelo professor
+16 - Desenvolva 2 exemplos de pseudo-elementos que não foram demonstradas pelo professor
+*/
+
+/* 1 */
+nav a:any-link{
+    color: var(--bg-black);
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: var(--bg-hover);
+    text-decoration: underline;
+}
+
+nav a:active{
+    color: var(--bg-darkgray);
+}
+
+/* 2 */
+nav{
+    text-align: center;
+}
+
+nav > div{
+    display: inline-block;
+    margin: 0 30px;
+}
+
+/* 3 */
+tr:nth-child(4){
+    display: none;
+}
+
+/* 4 */
+tr:nth-child(3n){
+    background-color: var(--bg-darkgray);
+}
+
+/* 5 */
+tr:first-child{
+    background-color: var(--bg-black);
+    color: var(--bg-white);
+}
+
+/* 6 */
+section{
+    background-color: var(--bg-section1);
+}
+
+section + section{
+    background-color: var(--bg-section2);
+}
+
+section + section + section{
+    background-color: var(--bg-section3);
+}
+
+/* 7 */
+#sobre, #produtos, #endereco{
+    color: var(--bg-h1);
+}
+
+/* 8 */
+td:last-child:not(tr:first-child td):before{
+    content:"R$ ";
+}
+
+/* tr:not(:first-child) td:last-child::before{
+    content: "R$ ";
+} */
+
+/* 9 */
+a[href^="http"]:any-link{
+    color: var(--bg-black);
+}
+
+/* 10 */
+address p:first-child::before{
+    content: "Rua ";
+}
+
+/* 11 */
+address p:nth-child(2)::before{
+    content: "bairro ";
+}
+
+/* 12 */
+address p:last-child::after{
+    content:" - Santa Catarina"
+}
+
+/* 13 */
+tr:hover:not(:first-child){
+    background-color: var(--bg-hover);
+}
+
+tr{
+    transition: background-color 0.3s;
+}
+
+/* 14 */
+address{text-align: center;}
+
+/* 17 - Colocar todas as cores do site em variaveis */
+
+/* 18 - Testar 3 outras funções não implementadas neste CSS */
+
+header img{
+    transition: transform 1s;
+}
+
+header img:hover{
+    transform: rotate(0.1turn);
+}
+

@@ -1,0 +1,109 @@
+*{
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+  background-color: #ccd5ae;
+  margin: 0;
+  padding: 0;
+}
+
+/* menu fixo no topo da pagina */
+nav{
+  background-color: #e9edc9;
+  position: fixed;
+  top:0;
+  width: 100%;
+  display: flex;
+}
+
+/* links que estão dentro do nav */
+nav a{
+  padding: 20px;
+  display: inline-block;
+}
+
+nav a:link, nav a:visited{
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover{
+  text-decoration: underline;
+  color: #d4a373;
+}
+
+header{
+  background-color: #d4a373;
+}
+
+/* seletor de id ='#nome' */
+#sobre{
+  background-color: #fefae0;
+}
+
+#menu{
+  background-color: #faedcd ;
+}
+
+.container{
+  max-width: 900px;
+  margin: auto;
+}
+
+/* hack menu fixo, colocamos padding-top para os titulos não entrarem embaixo do menu */
+header, section{
+  padding: 50px 30px 30px 30px;
+  min-height: 90vh;
+}
+
+header{
+  text-align: center;
+  padding-top: 30vh;
+}
+
+table{
+  width: 100%;
+}
+
+th, td{
+  padding: 10px;
+  border-bottom: 1px dotted #726969;
+}
+
+th{
+  background-color: #d4a373;
+}
+
+/* teste fullscreen */
+/* não funciona em 2024 */
+body:fullscreen{
+  background-color: red;
+}
+
+td:first-child{
+  font-weight: bold;
+}
+
+/* Como centralizar as duas ultimas colunas da tabela cardapio */
+/* versão 1 - menos preferencia */
+td:last-child, td:nth-child(2){
+  text-align: center;
+}
+
+/* versão 2 */
+/* ultilizando a pseudo classe :not */
+td:not(:first-child){
+  font-style: italic;
+}
+
+tr:nth-child(even){
+  background-color: #e4bb92;
+}
+
+tr:hover{
+  color: #ffffff;
+}
+

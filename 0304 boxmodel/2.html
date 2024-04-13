@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Containers semanticos</title>
+  <style>
+    .container, .container2{
+      width: 75%;
+      margin: auto;
+      background-color: #ccc;
+    }
+
+    header{
+      background-color: red;
+    }
+
+    nav{
+      background-color: blue;
+    }
+    
+    main{
+      background-color: yellow;
+    }
+    footer{
+      background-color: cyan;
+    }
+
+    main, section, header, nav, footer{
+      padding: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>Topo da pagina</header>
+    <nav>Menu de navegação</nav>
+    <main>Conteudo principal</main>
+    <section>Nova seção</section>
+    <footer>Rodapé da pagina</footer>
+  </div>
+
+  <div class="container2">
+    Container2
+  </div>
+</body>
+</html>

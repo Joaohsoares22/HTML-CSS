@@ -1,0 +1,10 @@
+/* CSS para telas grandes */
+
+body{
+    background-color: black;
+}
+.container{
+    max-width: 950px;
+    margin: auto;
+    padding: 50px;
+}
